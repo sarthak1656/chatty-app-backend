@@ -11,7 +11,6 @@ export const generateToken = (userId, res) => {
     sameSite: "none", // 👈 Change this from 'strict' to 'none'
     secure: true,
   });
-  
 
   return token;
 };
