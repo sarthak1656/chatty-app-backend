@@ -18,8 +18,8 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
   cors({
-    origin: ["http://localhost:5173"], // ✅ Allow your local frontend
-    credentials: true, // ✅ Allow cookies to be sent
+    origin: ["http://localhost:5173", "https://chat-app-frontend-l6g2.vercel.app"],
+    credentials: true,
   })
 );
 
