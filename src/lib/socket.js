@@ -13,10 +13,9 @@ const io = new Server(server, {
       "http://localhost:5173",
       "https://chat-app-frontend-l6g2.vercel.app",
     ],
-    credentials: true, // ✅ Allow cookies/auth headers
+    credentials: true,
   },
 });
-
 // Map to track connected users
 const userSocketMap = {}; // { userId: socketId }
 
