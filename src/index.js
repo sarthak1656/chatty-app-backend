@@ -11,7 +11,8 @@ import { app, server } from "./lib/socket.js";
 dotenv.config();
 
 // ✅ Middleware
-app.use(express.json());
+app.use(express.json({ limit: "10mb" })); // Supports large base64 strings
+
 app.use(cookieParser());
 
 // ✅ CORS: allow both local and deployed frontend
