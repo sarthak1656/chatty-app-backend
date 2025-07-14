@@ -11,7 +11,7 @@ const io = new Server(server, {
   cors: {
     origin: [
       "http://localhost:5173",
-      "https://chat-app-frontend-l6g2.vercel.app",
+      "https://chatty-app-frontend-iota.vercel.app",
     ],
     credentials: true,
   },

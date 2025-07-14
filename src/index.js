@@ -20,7 +20,7 @@ app.use(
   cors({
     origin: [
       "http://localhost:5173", // local dev
-      "https://chat-app-frontend-l6g2.vercel.app", // deployed Vercel frontend
+      "https://chatty-app-frontend-iota.vercel.app", // deployed Vercel frontend
     ],
     credentials: true, // Required to send cookies
   })
