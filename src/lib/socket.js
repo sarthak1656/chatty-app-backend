@@ -29,8 +29,11 @@ io.on("connection", (socket) => {
   console.log("✅ User connected:", socket.id);
 
   const userId = socket.handshake.query.userId;
+  console.log("User ID from query:", userId);
+
   if (userId) {
     userSocketMap[userId] = socket.id;
+    console.log("Current online users:", Object.keys(userSocketMap));
     io.emit("getOnlineUsers", Object.keys(userSocketMap));
   }
 
@@ -40,6 +43,7 @@ io.on("connection", (socket) => {
 
     if (userId) {
       delete userSocketMap[userId];
+      console.log("Updated online users:", Object.keys(userSocketMap));
       io.emit("getOnlineUsers", Object.keys(userSocketMap));
     }
   });
